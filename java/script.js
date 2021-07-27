@@ -20,3 +20,14 @@ function dragEnd(e){
 }
 
 //functions area
+function dragOver(e){
+
+}
+
+function dragLeaver(e){
+
+}
+
+function Drop(e){
+    
+}
