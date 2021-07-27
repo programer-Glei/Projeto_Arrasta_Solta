@@ -5,9 +5,9 @@ document.querySelectorAll('.item').forEach(item =>{
 })
 
 document.querySelectorAll('.area').forEach(area =>{
-    area.addEventListener('draover', dragOver)
-    area.addEventListener('dragleave', dragLeaver)
-    area.addEventListener('drop', Drop)
+    area.addEventListener('dragover', dragOver);
+    area.addEventListener('dragleave', dragLeaver);
+    area.addEventListener('drop', Drop);
 })
 
 //functions item
@@ -21,7 +21,8 @@ function dragEnd(e){
 
 //functions area
 function dragOver(e){
-
+    e.preventDefault();
+    e.currentTarget.classList.add('hover')
 }
 
 function dragLeaver(e){
@@ -29,5 +30,5 @@ function dragLeaver(e){
 }
 
 function Drop(e){
-    
+
 }
