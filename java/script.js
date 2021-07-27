@@ -26,7 +26,7 @@ function dragOver(e){
 }
 
 function dragLeaver(e){
-
+    e.currentTarget.classList.remove('hover')
 }
 
 function Drop(e){
