@@ -12,7 +12,7 @@ document.querySelectorAll('.area').forEach(area =>{
 
 document.querySelector('.neutralArea').addEventListener('dragover', dragOverNeutral)
 document.querySelector('.neutralArea').addEventListener('dragleave', dragleaveNeutral)
-document.querySelector('neutralArea').addEventListener('drop', dropNeutral)
+document.querySelector('.neutralArea').addEventListener('drop', dropNeutral)
 
 //functions item
 function dragStart(e){
@@ -46,14 +46,17 @@ function Drop(e){
 
 //Functions Neutral area
 
-function dragOverNeutral(){
-
+function dragOverNeutral(e){
+    e.preventDefault()
+    e.currentTarget.classList.add('hover')
 }
 
-function dragleaveNeutral(){
-
+function dragleaveNeutral(e){
+    e.currentTarget.classList.remove('hover')
 }
 
-function dropNeutral(){
-    
+function dropNeutral(e){
+    e.currentTarget.classList.remove('hover')
+    let dragItem = document.querySelector('.item.dragging')
+    e.currentTarget.appendChild(dragItem)
 }
