@@ -30,5 +30,7 @@ function dragLeaver(e){
 }
 
 function Drop(e){
+    e.currentTarget.classList.remove('hover')
 
+    let dragItem = document.querySelector('.item.dragging')
 }
