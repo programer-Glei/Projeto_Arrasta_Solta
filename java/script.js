@@ -1,4 +1,10 @@
 
+let areas = {
+    a: null,
+    b: null,
+    c: null
+}
+
 document.querySelectorAll('.item').forEach(item =>{
     item.addEventListener('dragstart', dragStart);
     item.addEventListener('dragend', dragEnd);
@@ -41,6 +47,7 @@ function Drop(e){
     if(e.currentTarget.querySelector('.item') == null){
         let dragItem = document.querySelector('.item.dragging')
         e.currentTarget.appendChild(dragItem)
+        updateAreas()
     }
 }
 
@@ -59,4 +66,11 @@ function dropNeutral(e){
     e.currentTarget.classList.remove('hover')
     let dragItem = document.querySelector('.item.dragging')
     e.currentTarget.appendChild(dragItem)
+    updateAreas()
+}
+
+// Logic Functions
+
+function updateAreas(){
+
 }
