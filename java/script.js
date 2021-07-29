@@ -72,7 +72,7 @@ function dropNeutral(e){
 // Logic Functions
 
 function updateAreas(){
-    document.querySelectorAll('area').forEach(area =>{
+    document.querySelectorAll('.area').forEach(area =>{
         let name = area.getAttribute('data-name')
 
         if(area.querySelector('.item') !== null){
@@ -81,4 +81,8 @@ function updateAreas(){
             areas[name] = null;
         }
     })
+
+    if(areas.a === '1' && areas.b === '2' && areas.c === '3'){
+        document.querySelector('.areas').classList.add('correct');
+    }
 }
